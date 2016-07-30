@@ -2,3 +2,5 @@
 .remote-sync.json
 
 .htaccess
+
+mail/contact_me.php
