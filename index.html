@@ -72,8 +72,9 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">September 17th 2016</div>
                 <div class="intro-heading">Fayette Safety Summit</div>
+                <div class="intro-lead-in">Registration ends in:</div>
+                <div id="clock" class="intro-lead-in"></div>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpbHbttC343yGT6GnFFhSEYP0DJCFDQzbVNPMfHbHoFy6X-w/viewform?c=0&w=1" class="page-scroll btn btn-xl">Register Now</a>
             </div>
         </div>
@@ -465,6 +466,19 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+
+    <!-- Countdown Timer JS -->
+    <script src="js/jquery.countdown.js"></script>
+    <script type="text/javascript">
+    $('#clock').countdown('2016/9/17').on('update.countdown', function(event) {
+       var $this = $(this).html(event.strftime(''
+         + '<span>%-w</span> week%!w '
+         + '<span>%-d</span> day%!d '
+         + '<span>%H</span> hr '
+         + '<span>%M</span> min '
+         + '<span>%S</span> sec'));
+     });
+    </script>
 
 </body>
 
